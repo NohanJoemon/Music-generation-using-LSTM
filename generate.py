@@ -35,9 +35,6 @@ def gen_sequence(gen_seq_length,wpath,path_char_to_index):
 
 
 def convert_to_midi(abc,writepath):
-    if os.path.exists(writepath):
-        os.remove(writepath)
-
     c = converter.subConverters.ConverterABC()
     c.registerOutputExtensions = ("midi", )
     c.parseData(abc)
