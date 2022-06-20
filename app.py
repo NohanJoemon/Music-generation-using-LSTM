@@ -8,7 +8,7 @@ app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 wpath = os.path.join(APP_ROOT,"static/weights.80.hdf5")
 path_char_to_index = os.path.join(APP_ROOT,"static/char_to_index.json")
-mpath = os.path.join(APP_ROOT,"static/temp/music.mid")
+mpath = os.path.join(APP_ROOT,"static/tmp/music.mid")
 
 @app.route("/", methods=["GET","POST"])
 def predict():
