@@ -19,14 +19,14 @@ body {
 }
   
 h1,h2,h3{
-  color:  rgb(42 72 183);
+  color:  #a50035;
   font-family: "Montserrat",sans-serif;
 }
 h1{
   border:5px solid;
   text-align: center;
   font-size: 60px;
-  border-color:rgb(42 72 183);
+  border-color:#a50035;
   padding:5px;
 }
 h2 {
