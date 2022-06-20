@@ -19,8 +19,13 @@ def predict():
         predictor.predict(seq_length,wpath,path_char_to_index,mpath)
         pred=1
         selected=[seq_length]
-        return send_file(mpath, as_attachment=True)
-    return render_template("index.html",pred=pred, selected=selected,writepath=mpath)
+        return render_template("index.html",pred=pred, selected=selected)
+        
+    return render_template("index.html",pred=pred, selected=selected)
+
+@app.route("/download", methods=["GET","POST"])
+def download():
+    return send_file(mpath, as_attachment=True)
 
 if __name__=="__main__":
     app.run(host='0.0.0.0',port=5000,debug=True)

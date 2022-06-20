@@ -65,7 +65,20 @@
                     <center><input class="submit-btn" type="submit" value="Generate music"></center>
                 </form>
                 
-        
+            {% if pred %}
+            <div>
+                <h2>
+                    Results: 
+                </h2>
+                <br>
+                    Generated music is ready.
+                    <br>
+                    <form action="\download">
+                        <input class="submit-btn" type="submit" value="Download">
+                    </form>
+                
+            </div>
+            {%endif%}
     </div>
     
 
