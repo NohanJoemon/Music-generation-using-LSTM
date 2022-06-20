@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Generation using LSTM</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}"/>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.jpg') }}">
+</head>
+
+
+<body>
+    <div class="center-container">
+        <h1>
+            <span class="iconify" data-icon="mdi:cricket"></span>
+            Music Generation using LSTM
+        </h1>
+        <h5>Author: Nohan Joemon</h5>
+        <h5>Topics: RNN,LSTM</h5>
+            <h2>
+                About the project:
+            </h2>
+            <div style='display:flex'>
+                <img class="mainimage" src="{{ url_for('static', filename='mainimg.jpg') }}">
+                <div>
+                    <p class="about">
+                        &nbsp;&nbsp; Reviews are essential means of knowing the performance of a product. 
+                        In this project, I have created a model that predicts the score of a review based on the text. 
+                        This sentiment analysis model classifies the text into 1 to 5, based on the sentiment behind the review. 
+                        For example, "Nice product" usually means a score of 5 and “Poor quality” usually means a score of 1.
+                        <br><br>
+                        &nbsp;&nbsp; The model was trained using the 
+                        <a href="https://www.kaggle.com/datasets/bittlingmayer/amazonreviews">Amazon reviews dataset</a>, 
+                        which contains around 5 lakh reviews. Since there was a class imbalance, I did undersampling to balance the classes. 
+                        I used the BERT model and a linear layer at the end. Therefore, for word embedding, I used the BERT tokenizer.
+                         The parameters of the BERT model were frozen during the training process to avoid computational complexity. 
+                         The test accuracy turned out to be 47.4%, much greater than the random case (20%).
+
+                        <br><br>
+                        The codes for training and deployment are attached below:
+                        
+                        <br>
+                    </p>
+                    <div style="text-align: center;margin-top:15px;" >
+                        
+                        <a class="github" style="  text-decoration-line: None;" target="_blank" href="https://github.com/NohanJoemon/Automatic-review-labelling-using-BERT"><i style="font-size:20px;" class="fa fa-github"></i>  Github link </a>
+                    </div>
+                </div>
+               
+            </div>
+
+        
+    
+            <h2>
+                Test using your inputs :
+            </h2>
+                <form action="/" method="POST">
+                    <div style="text-align:center;display:flex;justify-content:center;">
+                        <!-- Sequence Length -->
+                        <label for="seqlength">Enter the sequence length of the music:</label>
+                        {% if selected[0] == None %}
+                        <input id="seqlength" name="seqlength"></input>     
+                        {%else%}
+                        <input id="seqlength" name="seqlength" value="{{selected[0]}}"></input>     
+                        {%endif%}
+                    </div>
+                    
+                    <center><input class="submit-btn" type="submit" value="Generate music"></center>
+                </form>
+                
+            {% if pred %}
+            <div>
+                <h2>
+                    Generated music: 
+                </h2>
+                <br>
+                    <a href="{{ url_for('static', filename='demos1.mid') }}" download>Download</a>
+                    </a>
+                
+            </div>
+            {%endif%}
+    </div>
+    
+
+
+</body>
+
+
+</html>
