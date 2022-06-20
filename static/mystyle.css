@@ -1,6 +1,6 @@
 /* Main image */
 .mainimage {
-  width: 47%;
+  width: 50%;
   margin:3px;
 }
 .about {
@@ -14,19 +14,19 @@
 }
 
 body {
-  background-color: rgb(229 227 178);
+  background-color: rgb(188 235 185);
   font-family: "Helvetica";
 }
   
 h1,h2,h3{
-  color:  rgb(43 29 116);
+  color:  rgb(116 29 29);
   font-family: "Montserrat",sans-serif;
 }
 h1{
   border:5px solid;
   text-align: center;
   font-size: 60px;
-  border-color:rgb(43 29 116);
+  border-color:rgb(116 29 29);
   padding:5px;
 }
 h2 {

@@ -25,26 +25,22 @@
                 <img class="mainimage" src="{{ url_for('static', filename='mainimg.jpg') }}">
                 <div>
                     <p class="about">
-                        &nbsp;&nbsp; Reviews are essential means of knowing the performance of a product. 
-                        In this project, I have created a model that predicts the score of a review based on the text. 
-                        This sentiment analysis model classifies the text into 1 to 5, based on the sentiment behind the review. 
-                        For example, "Nice product" usually means a score of 5 and “Poor quality” usually means a score of 1.
+                        &nbsp;&nbsp; Music is an art and a universal language. It is a collection of notes of different frequencies.
+                        In this project, I have tried to develop a deep learning model that generates music on its own. 
+                        The model was trained using a set of 65 tunes(in ABC notation) taken from the  Nottingham Music Database. I have taken some parts of
+                        the model development code from <a target="_blank" href = "https://github.com/analytics-club-iitm/MiniProject-Music-Generation">here</a>.
+                        The preprocessing step consisted of removing the metadata and extracting inputs and outputs from the database. I have used a
+                        series of LSTM layers along with Dropout. In the following section, you can use the model to generate music of a specific sequence length.
+                        Please download the music and listen on your favourite music player!!
                         <br><br>
-                        &nbsp;&nbsp; The model was trained using the 
-                        <a href="https://www.kaggle.com/datasets/bittlingmayer/amazonreviews">Amazon reviews dataset</a>, 
-                        which contains around 5 lakh reviews. Since there was a class imbalance, I did undersampling to balance the classes. 
-                        I used the BERT model and a linear layer at the end. Therefore, for word embedding, I used the BERT tokenizer.
-                         The parameters of the BERT model were frozen during the training process to avoid computational complexity. 
-                         The test accuracy turned out to be 47.4%, much greater than the random case (20%).
-
-                        <br><br>
+                        
                         The codes for training and deployment are attached below:
                         
                         <br>
                     </p>
                     <div style="text-align: center;margin-top:15px;" >
                         
-                        <a class="github" style="  text-decoration-line: None;" target="_blank" href="https://github.com/NohanJoemon/Automatic-review-labelling-using-BERT"><i style="font-size:20px;" class="fa fa-github"></i>  Github link </a>
+                        <a class="github" style="  text-decoration-line: None;" target="_blank" href="https://github.com/NohanJoemon/Music-generation-using-LSTM"><i style="font-size:20px;" class="fa fa-github"></i>  Github link </a>
                     </div>
                 </div>
                
@@ -75,7 +71,7 @@
                     Generated music: 
                 </h2>
                 <br>
-                    <a href="{{ url_for('static', filename='demos1.mid') }}" download>Download</a>
+                    <a href="{{ url_for('static', filename='music.mid') }}" download>Download</a>
                     </a>
                 
             </div>
