@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 import predictor
 import os
 
@@ -14,13 +14,12 @@ mpath = os.path.join(APP_ROOT,"tmp/music.mid")
 def predict():
     pred=None
     selected=None
-    writepath=None
     if request.method  == "POST":
         seq_length = int(request.form["seqlength"])
-        writepath = predictor.predict(seq_length,wpath,path_char_to_index,mpath)
+        predictor.predict(seq_length,wpath,path_char_to_index,mpath)
         pred=1
         selected=[seq_length]
-    print(writepath)
+        return send_file(mpath, as_attachment=True)
     return render_template("index.html",pred=pred, selected=selected,writepath=mpath)
 
 if __name__=="__main__":
