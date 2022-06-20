@@ -10,4 +10,4 @@ I have used a series of LSTM layers along with Dropout.
 
 # Website preview
 https://music-generation-lstm.herokuapp.com/
-![image](https://user-images.githubusercontent.com/62956111/174624991-ea73627f-89fe-4887-9dd3-f6e8d9cbc6ce.png)
+![image](https://user-images.githubusercontent.com/62956111/174627893-ed8b306b-e540-4bd9-a61a-098098664d01.png)
