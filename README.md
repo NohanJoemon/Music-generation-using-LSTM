@@ -1,5 +1,5 @@
 # Music Generation using LSTM
-![image](https://user-images.githubusercontent.com/62956111/174624661-35e9300a-d628-4d69-87a9-13909f4c6d21.png)
+![image](https://user-images.githubusercontent.com/62956111/174930148-2b9dafdb-0bd5-4556-952b-0a31213c9d50.png)
 
 Music is an art and a universal language. It is a collection of notes of different frequencies. 
 In this project, I have tried to develop a deep learning model that generates music on its own. 
